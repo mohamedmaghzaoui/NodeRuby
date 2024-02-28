@@ -5,7 +5,7 @@ module Moderable
   extend ActiveSupport::Concern
 
   included do
-    
+    #do the moderation 
     before_save :apply_moderation
   end
   #class methods function to get and set columns 
@@ -57,7 +57,7 @@ module Moderable
   #if predicction <0.5 return true else return false
       return prediction < 0.5 
     else
-      # Handle error case
+     
       return false
     end
   end
