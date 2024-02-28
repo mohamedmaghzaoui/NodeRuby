@@ -1,0 +1,32 @@
+<%= form_with(model: debate) do |form| %>
+  <% if debate.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(debate.errors.count, "error") %> prohibited this debate from being saved:</h2>
+
+      <ul>
+        <% debate.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div >
+    <%= form.label :title, style: "display: block" %>
+    <%=  form.text_field :title,class:"form-control w-25" %>
+  </div>
+
+  <div>
+    <%= form.label :text, style: "display: block" %>
+    <%= form.text_area :text ,class:"form-control w-25" %>
+  </div>
+
+  <div>
+    <%= form.label :user, style: "display: block" %>
+    <%= form.text_field :user ,class:"form-control w-25" %>
+  </div>
+
+  <div>
+    <%= form.submit class:"btn btn-success my-2" %>
+  </div>
+<% end %>

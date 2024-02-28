@@ -1,0 +1,12 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @debate %>
+ <span class="fw-bold">is accepted : </span>
+    <%=  @debate.is_accepted%>
+
+<div>
+  <%= link_to "Edit this debate", edit_debate_path(@debate) %> |
+  <%= link_to "Back to debates", debates_path %>
+
+  <%= button_to "Destroy this debate", @debate, method: :delete %>
+</div>

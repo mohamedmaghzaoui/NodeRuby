@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Debates</h1>
+
+<div id="debates">
+  <% @debates.each do |debate| %>
+    <%= render debate %>
+    <span class="fw-bold">is accepted : </span>
+    <%=  debate.is_accepted%>
+    <p>
+      <%= link_to "Show this debate", debate %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New debate", new_debate_path,class:"btn btn-primary" %>
