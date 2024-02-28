@@ -1,7 +1,7 @@
 require 'net/http'
 require 'uri'
 
-module Moderate
+module Moderable
   extend ActiveSupport::Concern
 
   included do
